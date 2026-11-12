@@ -1,0 +1,52 @@
+{
+    "friendlyName": "Apple iPhone 15 Pro (Dynamic Island)",
+    "version": 1,
+    "screens": [
+        {
+            "width": 1179,
+            "height": 2556,
+            "navigationBarHeight": 0,
+            "dpi": 460.0,
+            "orientations": [
+                {
+                    "orientation": 1,
+                    "safeArea": { "x": 0.0, "y": 102.0, "width": 1179.0, "height": 2277.0 },
+                    "cutouts": [
+                        { "x": 402.0, "y": 2412.0, "width": 375.0, "height": 111.0 }
+                    ]
+                }
+            ],
+            "presentation": {
+                "overlayPath": "iPhone15Pro_Overlay.png",
+                "borderSize": { "x": 60.0, "y": 60.0, "z": 60.0, "w": 60.0 }
+            }
+        }
+    ],
+    "systemInfo": {
+        "deviceModel": "iPhone16,1",
+        "deviceType": 2,
+        "operatingSystem": "iOS 17.0",
+        "operatingSystemFamily": 0,
+        "processorCount": 6,
+        "processorFrequency": 0,
+        "processorType": "arm64e",
+        "supportsAccelerometer": true,
+        "supportsGyroscope": true,
+        "supportsLocationService": true,
+        "supportsVibration": true,
+        "systemMemorySize": 7680,
+        "graphicsDependentData": [
+            {
+                "graphicsDeviceType": 16,
+                "graphicsMemorySize": 2048,
+                "graphicsDeviceName": "Apple A17 Pro GPU",
+                "graphicsDeviceVendor": "Apple",
+                "graphicsDeviceVersion": "Metal",
+                "graphicsShaderLevel": 50,
+                "maxTextureSize": 16384,
+                "npotSupport": 2,
+                "supportsInstancing": true
+            }
+        ]
+    }
+}

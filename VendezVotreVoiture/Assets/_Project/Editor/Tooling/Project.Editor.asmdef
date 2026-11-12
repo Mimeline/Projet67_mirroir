@@ -1,7 +1,10 @@
 {
     "name": "Project.Editor",
     "rootNamespace": "Project.Tooling",
-    "references": [],
+    "references": [
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
     "includePlatforms": [
         "Editor"
     ],
