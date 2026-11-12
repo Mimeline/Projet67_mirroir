@@ -13,7 +13,7 @@ Jeu mobile en portrait (iOS et Android), avec des essais en Web.
 
 | Dossier | Contenu |
 |---|---|
-| `Assets/_Project/` | uniquement le jeu : `Runtime/` (code), `Rendering/` (shaders) |
+| `Assets/_Project/` | uniquement le jeu : `Runtime/` (code), `Shaders/` |
 | `Assets/Tools/` | outils de l'éditeur, absents des builds : téléphone distant, menus `Outils`, appareils du simulateur |
 | `Assets/Dev/` | tout ce qui sert aux tests : scènes de base (`Scenes/`), essais (`Essais/`) |
 | `Assets/Settings/` | réglages URP du modèle Unity (rendus Mobile et PC, post-traitement par défaut) |
