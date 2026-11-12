@@ -9,3 +9,4 @@ Outils de l'éditeur, indépendants du jeu (absents des builds). Assembly `Tools
 - `Layout/` : disposition de dev, appliquée à l'ouverture.
 - `Network/` : adresse locale, partagée avec `PhoneRemote`.
 - `Memory/` : nettoyage régulier de la mémoire de l'éditeur.
+- `Scenes/` : crée le squelette des scènes du jeu (lit `Project.Runtime`, pour les chemins des scènes).
