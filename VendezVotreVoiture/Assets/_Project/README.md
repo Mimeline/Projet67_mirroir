@@ -1,8 +1,6 @@
 # _Project
 
-Tout ce qui appartient au projet (le reste de `Assets/` vient des modèles et paquets).
+Uniquement ce qui appartient au jeu. Les outils sont dans `Assets/Tools`, les tests dans `Assets/Dev`.
 
-- `Editor/` : outils de l'éditeur.
 - `Runtime/` : code du jeu.
-- `Rendering/` : shaders et ressources de rendu.
-- `Scenes/` : scènes du projet (`Essais/` pour les essais).
+- `Rendering/` : shaders du jeu.

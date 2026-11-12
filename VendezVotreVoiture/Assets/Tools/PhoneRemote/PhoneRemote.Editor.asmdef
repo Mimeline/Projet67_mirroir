@@ -1,0 +1,19 @@
+{
+    "name": "PhoneRemote.Editor",
+    "rootNamespace": "PhoneRemote",
+    "references": [
+        "Unity.InputSystem",
+        "Tools.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
