@@ -28,7 +28,7 @@ Chaque dossier de `_Project/`, `Tools/` et `Dev/` a son `README.md`.
 
 - **Téléphone distant** : au Play, la console donne une adresse `http://<IP>:8765` ; ouverte sur un téléphone du même Wi-Fi, elle affiche la vue Game et renvoie le tactile au jeu. Interrupteur : `Outils > Téléphone distant au Play`.
 - **Build Web servie en local** : `Outils > Web > Construire et servir` (adresse `http://<IP>:8766`).
-- **Réglages** : `Outils > Configurer le projet mobile` (portrait, IL2CPP, ASTC…) et `Outils > Rendu > Appliquer les réglages mobiles` (MSAA, ombres, échelle de rendu). Rejouables.
+- **Réglages du rendu** : `Outils > Rendu > Appliquer les réglages mobiles` (MSAA, ombres, échelle de rendu). Rejouables.
 - **Essai de style** : `Outils > Rendu > Créer la scène d'essai de style` → `Assets/Dev/Essais/Style/EssaiStyle.unity`.
 - **Disposition de dev** : `Outils > Disposition de dev` (appliquer, enregistrer).
 
