@@ -11,7 +11,7 @@ Code réservé à l'éditeur (assembly `PhoneRemote.Editor`), absent des builds.
 
 - `PhoneRemoteSession.cs` : démarrage et arrêt avec Play, adresse dans la console, interrupteur.
 - `Server/` : `RemoteServer` (TCP : page HTTP et WebSocket), `WebSocketFraming`, `ClientSocket` (un téléphone).
-- `Capture/` : `FrameCapture`, capture de la vue Game, JPEG 720 px, 25 images/s.
+- `Capture/` : `FrameCapture`, capture de la vue Game, JPEG 720 px, 25 images/s. Sa propre assembly (`PhoneRemote.Capture`, compilée seulement dans l'éditeur) : un composant ne peut pas venir d'une assembly réservée à l'éditeur.
 - `Input/` : `TouchInjector`, écran tactile virtuel de l'Input System.
 - `Web/index.html` : la page du téléphone (plein écran, tactile).
 

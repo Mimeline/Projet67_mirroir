@@ -3,7 +3,8 @@
     "rootNamespace": "PhoneRemote",
     "references": [
         "Unity.InputSystem",
-        "Tools.Editor"
+        "Tools.Editor",
+        "PhoneRemote.Capture"
     ],
     "includePlatforms": [
         "Editor"
