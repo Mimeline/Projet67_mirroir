@@ -9,3 +9,4 @@ Outils de l'éditeur, indépendants du jeu (absents des builds). Assembly `Tools
 - `WebServe/` : build Web servie sur le réseau local.
 - `Layout/` : disposition de dev, appliquée à l'ouverture.
 - `Network/` : adresse locale, partagée avec `PhoneRemote`.
+- `Memory/` : nettoyage régulier de la mémoire de l'éditeur.
