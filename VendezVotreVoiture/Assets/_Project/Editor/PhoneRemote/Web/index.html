@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Téléphone distant</title>
+<style>
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; }
+canvas { position: fixed; inset: 0; width: 100vw; height: 100dvh; }
+#etat { position: fixed; top: env(safe-area-inset-top); left: 0; right: 0; color: #fff; font: 14px system-ui; text-align: center; opacity: .7; pointer-events: none; }
+</style>
+</head>
+<body>
+<canvas id="ecran"></canvas>
+<div id="etat">Connexion…</div>
+<script>
+const canvas = document.getElementById("ecran");
+const g = canvas.getContext("2d");
+const etat = document.getElementById("etat");
+let socket = null;
+let cadre = { x: 0, y: 0, w: 1, h: 1 };
+
+function dessiner(image) {
+  const dpr = devicePixelRatio || 1;
+  canvas.width = innerWidth * dpr;
+  canvas.height = innerHeight * dpr;
+  const k = Math.min(canvas.width / image.width, canvas.height / image.height);
+  cadre = { w: image.width * k, h: image.height * k };
+  cadre.x = (canvas.width - cadre.w) / 2;
+  cadre.y = (canvas.height - cadre.h) / 2;
+  g.drawImage(image, cadre.x, cadre.y, cadre.w, cadre.h);
+}
+
+function connecter() {
+  socket = new WebSocket(`ws://${location.host}/`);
+  socket.binaryType = "blob";
+  socket.onopen = () => { etat.textContent = ""; };
+  socket.onmessage = async (e) => dessiner(await createImageBitmap(e.data));
+  socket.onclose = () => { etat.textContent = "Connexion perdue : lancer Play dans Unity…"; setTimeout(connecter, 1000); };
+}
+
+function envoyer(e, phase) {
+  e.preventDefault();
+  if (!socket || socket.readyState !== 1) return;
+  const dpr = devicePixelRatio || 1;
+  for (const t of e.changedTouches) {
+    const x = (t.clientX * dpr - cadre.x) / cadre.w;
+    const y = (t.clientY * dpr - cadre.y) / cadre.h;
+    socket.send(`t ${t.identifier % 1000} ${phase} ${x.toFixed(4)} ${y.toFixed(4)}`);
+  }
+}
+
+canvas.addEventListener("touchstart", (e) => envoyer(e, "b"), { passive: false });
+canvas.addEventListener("touchmove", (e) => envoyer(e, "m"), { passive: false });
+canvas.addEventListener("touchend", (e) => envoyer(e, "e"), { passive: false });
+canvas.addEventListener("touchcancel", (e) => envoyer(e, "c"), { passive: false });
+connecter();
+</script>
+</body>
+</html>
