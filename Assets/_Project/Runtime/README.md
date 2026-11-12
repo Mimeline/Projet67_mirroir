@@ -1,5 +1,4 @@
 # Runtime
 
-Code du jeu (assembly `Project.Runtime`).
-
-- `Performance/` : réglages de performance appliqués au démarrage.
+- `Manager/` : gestionnaires des scènes et des niveaux.
+- `Performance/` : réglages de performance au démarrage.
