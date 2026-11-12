@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>{{{ PRODUCT_NAME }}}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="frame"><canvas id="unity-canvas" tabindex="-1"></canvas></main>
+<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+<script>
+createUnityInstance(document.querySelector("#unity-canvas"), {
+  dataUrl: "Build/{{{ DATA_FILENAME }}}",
+  frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_WASM
+  codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+  memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+  symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+  streamingAssetsUrl: "StreamingAssets",
+  companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+  productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+  productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+  matchWebGLToCanvasSize: true
+});
+</script>
+</body>
+</html>
