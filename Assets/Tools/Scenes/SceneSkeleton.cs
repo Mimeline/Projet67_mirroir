@@ -1,4 +1,4 @@
-// Crée les scènes du squelette qui n'existent pas encore (sans toucher aux autres) et les inscrit dans le build, Boot en premier.
+// Crée les scènes du squelette qui n'existent pas encore (sans toucher aux autres) et les inscrit dans le build, Root en premier.
 // Menu : Outils > Scènes > Créer le squelette.
 using System.IO;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Tools.Scenes
         [MenuItem("Outils/Scènes/Créer le squelette")]
         public static void Build()
         {
-            if (!File.Exists(SceneNames.Boot)) SceneFactories.CreateBoot();
+            if (!File.Exists(SceneNames.Root)) SceneFactories.CreateBoot();
             if (!File.Exists(SceneNames.EnviroLobby)) SceneFactories.CreateEnviro();
             if (!File.Exists(SceneNames.UiLobby)) SceneFactories.CreateUi();
             AssetDatabase.SaveAssets();

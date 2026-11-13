@@ -3,10 +3,10 @@ namespace Project.Manager
 {
     public static class SceneNames
     {
-        public const string Boot = "Assets/_Project/Scenes/Boot.unity";
-        public const string EnviroLobby = "Assets/_Project/Scenes/Enviro/Lobby.unity";
-        public const string UiLobby = "Assets/_Project/Scenes/UI/Lobby.unity";
+        public const string Root = "Assets/_Project/Scenes/Root.unity";
+        public const string EnviroLobby = "Assets/_Project/Scenes/Enviro/Env-Lobby.unity";
+        public const string UiLobby = "Assets/_Project/Scenes/UI/UI-Lobby.unity";
 
-        public static readonly string[] All = { Boot, EnviroLobby, UiLobby };
+        public static readonly string[] All = { Root, EnviroLobby, UiLobby };
     }
 }

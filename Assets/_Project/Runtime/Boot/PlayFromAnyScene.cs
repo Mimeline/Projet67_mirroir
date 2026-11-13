@@ -1,4 +1,4 @@
-// En éditeur : au Play depuis une autre scène que Boot, ajoute Boot par-dessus (chargement immédiat)
+// En éditeur : au Play depuis une autre scène que Root, ajoute Root par-dessus (chargement immédiat)
 // pour que les gestionnaires existent avant le premier Start. Sans effet dans un build.
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,8 +12,8 @@ namespace Project.Manager
         static void EnsureBoot()
         {
 #if UNITY_EDITOR
-            if (UnitySceneManager.GetSceneByPath(SceneNames.Boot).isLoaded) return;
-            UnitySceneManager.LoadScene(SceneNames.Boot, LoadSceneMode.Additive);
+            if (UnitySceneManager.GetSceneByPath(SceneNames.Root).isLoaded) return;
+            UnitySceneManager.LoadScene(SceneNames.Root, LoadSceneMode.Additive);
 #endif
         }
     }

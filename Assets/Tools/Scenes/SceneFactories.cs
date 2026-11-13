@@ -1,4 +1,4 @@
-// Fabrique les scènes du squelette : Boot (permanente), décor 3D du lobby, interface du lobby.
+// Fabrique les scènes du squelette : Root (permanente), décor 3D du lobby, interface du lobby.
 using Project.Manager;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -19,7 +19,7 @@ namespace Tools.Scenes
             boot.AddComponent<SceneManager>();
             boot.AddComponent<GameManager>();
             boot.AddComponent<Boot>();
-            Save(scene, SceneNames.Boot);
+            Save(scene, SceneNames.Root);
         }
 
         public static void CreateEnviro()
