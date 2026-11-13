@@ -1,5 +1,4 @@
 # Runtime
 
-- `Boot/` : démarrage du jeu, objet indestructible.
-- `Manager/` : gestionnaires des scènes et du jeu.
+- `Manager/` : gestionnaires des scènes et du jeu, démarrage.
 - `Performance/` : réglages de performance au démarrage.
